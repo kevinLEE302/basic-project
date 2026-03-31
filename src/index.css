@@ -16,3 +16,6 @@
 body {
     font-family: 'Prentendard', Actor;
 }
+button {
+    cursor: pointer;
+}

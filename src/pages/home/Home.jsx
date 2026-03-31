@@ -17,7 +17,7 @@ function Home() {
         try {
             setIsLoading(true);
             const data = await postSubject(value);
-            localStorage.getItem('id', data.id);
+            localStorage.setItem('id', data.id);
             navigate(`/post/${data.id}/answer`);
         } catch (e) {
             console.log(e.message);
@@ -42,7 +42,7 @@ function Home() {
                 <div className={styles['home-form-wrapper']}>
                     <form className={styles['home-form']} onSubmit={handleSubmit}>
                         <Input placeholder={'이름을 입력하세요'} onChange={handleChange} value={value} />
-                        <Button>{isLoading ? '로딩중...' : '질문 받기'}</Button>
+                        <Button disabled={!value}>{isLoading ? '로딩중...' : '질문 받기'}</Button>
                     </form>
                 </div>
             </div>

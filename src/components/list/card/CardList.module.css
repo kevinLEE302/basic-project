@@ -4,13 +4,15 @@
     grid-template-columns: repeat(4, minmax(186px, 220px));
     grid-template-rows: repeat(2, 187px);
     width: min(940px, calc(100% - 64px));
+    margin: 0 auto;
 }
+
 @media (max-width: 868px) {
     .cardList-container {
         grid-template-columns: repeat(3, minmax(186px, 220px));
     }
 }
-@media (max-width: 661px) {
+@media (max-width: 375px) {
     .cardList-container {
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(3, 168px);

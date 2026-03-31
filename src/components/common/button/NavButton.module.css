@@ -11,6 +11,7 @@
     line-height: 22px;
     border-radius: 8px;
     color: #542f1a;
+    white-space: nowrap;
 }
 .button:hover {
     outline: 2px solid var(--Brown-40, #542f1a);
