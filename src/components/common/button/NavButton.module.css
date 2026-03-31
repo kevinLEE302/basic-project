@@ -1,0 +1,26 @@
+.button {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    padding: 12px 24px;
+    background: var(--Brown-10, #f5f1ee);
+    border: 1px solid var(--Brown-40, #542f1a);
+    font-family: Pretendard;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    border-radius: 8px;
+    color: #542f1a;
+}
+.button:hover {
+    outline: 2px solid var(--Brown-40, #542f1a);
+}
+.button:active {
+    background: var(--Brown-20, #e4d5c9);
+    outline: 2px solid var(--Brown-40, #542f1a);
+}
+.button:disabled {
+    background: var(--Brown-10, #f5f1ee);
+    border: 1px solid var(--Brown-30, #c7bbb5);
+    outline: none;
+}

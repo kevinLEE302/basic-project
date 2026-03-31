@@ -1,0 +1,46 @@
+.dropout-anchor {
+    position: relative;
+    width: fit-content;
+}
+
+.dropout-container {
+    padding: 8px 12px;
+    border-radius: 8px;
+    border: 1px solid var(--Grayscale-40, #818181);
+    background-color: #ffffff;
+    display: flex;
+    gap: 4px;
+    align-items: center;
+    border-radius: 8px;
+    color: #818181;
+}
+
+.dropout-container:focus {
+    border: 1px solid var(--Grayscale-60, #000000);
+    color: var(--Grayscale-60, #000000);
+}
+.dropout-wrapper {
+    padding: 4px;
+    background-color: #ffffff;
+    box-shadow: 0px 4px 4px 0px #8c8c8c40;
+    border: 1px solid var(--Grayscale-30, #cfcfcf);
+    width: 100%;
+    position: absolute;
+    border-radius: 8px;
+    bottom: -4px;
+    left: 0;
+    transform: translateY(100%);
+}
+.dropout-button {
+    background-color: #ffffff;
+    border: none;
+    padding: 6px 16px;
+    font-family: Pretendard;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 18px;
+    white-space: nowrap;
+}
+.dropout-button:hover {
+    color: #1877f2;
+}
