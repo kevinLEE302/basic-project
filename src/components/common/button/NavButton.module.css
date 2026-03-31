@@ -24,3 +24,10 @@
     border: 1px solid var(--Brown-30, #c7bbb5);
     outline: none;
 }
+@media (max-width: 375px) {
+    .button {
+        font-size: 14px;
+        line-height: 18px;
+        padding: 8px 12px;
+    }
+}
