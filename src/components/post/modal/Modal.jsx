@@ -1,10 +1,10 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { postQuestion } from '../../../api/postApi';
 import Form from '../form/Form';
 import styles from './Modal.module.css';
 import { useParams } from 'react-router-dom';
 
-function Modal({ subject, onClick, func }) {
+function Modal({ subject, onClick, func, isOpen }) {
     const [content, setContent] = useState('');
     const [isLoading, setIsLoading] = useState(false);
     const { id } = useParams();
@@ -24,6 +24,15 @@ function Modal({ subject, onClick, func }) {
             setIsLoading(false);
         }
     };
+    useEffect(() => {
+        if (isOpen) {
+            document.body.style.overflow = 'hidden';
+
+            return () => {
+                document.body.style.overflow = 'auto';
+            };
+        }
+    }, [isOpen]);
     return (
         <div className={styles['modal-overlay']}>
             <div className={styles['modal-container']}>

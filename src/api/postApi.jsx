@@ -28,7 +28,7 @@ async function postQuestion({ content, id }) {
 //reaction 생성->개별피드 및 답변페이지에서 대상 목록조회 results
 //데이터의 아이디{questionId}를 통해 type을 post
 async function postReaction({ qd, type }) {
-    const response = await fetch(`https://openmind-api.vercel.app/17-5/questions/${qd}/reactions/`, {
+    const response = await fetch(`https://openmind-api.vercel.app/17-5/questions/${qd}/reaction/`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ type }),

@@ -7,6 +7,7 @@ const limit = 5;
 function Layout() {
     const [subject, setSubject] = useState({});
     const [data, setData] = useState([]);
+    const [totalCount, setTotalCount] = useState(0);
     const { id } = useParams();
 
     useEffect(() => {
@@ -14,12 +15,13 @@ function Layout() {
             try {
                 const a = await getQuestions({ id, offset, limit });
                 setData(a.results);
+                setTotalCount(a.count);
             } catch (e) {
                 console.log(e.message);
             }
         };
         getapi();
-    });
+    }, [id]);
 
     useEffect(() => {
         const getData = async () => {
@@ -36,7 +38,7 @@ function Layout() {
     return (
         <>
             <Header subject={subject} />
-            <Outlet context={{ subject, data }} />
+            <Outlet context={{ subject, data, totalCount }} />
         </>
     );
 }

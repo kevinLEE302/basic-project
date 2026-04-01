@@ -1,0 +1,116 @@
+.card-container {
+    padding: 32px;
+    background-color: #ffffff;
+    box-shadow: 0px 4px 4px 0px #8c8c8c40;
+    border-radius: 8px;
+    gap: 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.card-answerBox {
+    background-color: #ffffff;
+    border: 1px solid var(--Brown-40, #542f1a);
+    border-radius: 8px;
+    padding: 4px 12px;
+    font-family: Pretendard;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 18px;
+    color: #542f1a;
+}
+.card-noAnswerBox {
+    background-color: #ffffff;
+    border: 1px solid var(--Grayscale-40, #818181);
+    border-radius: 8px;
+    padding: 4px 12px;
+    font-family: Pretendard;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 18px;
+    color: #818181;
+}
+.card-questionday {
+    font-family: Pretendard;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 18px;
+    color: #818181;
+}
+.card-title {
+    font-family: Actor;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+}
+.card-content-container {
+    display: flex;
+    gap: 12px;
+}
+.card-photo {
+    max-width: 48px;
+    border-radius: 50%;
+}
+.card-content-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+.card-content-name {
+    font-family: Actor;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+}
+.card-question-content {
+    font-family: Actor;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+}
+.card-answerday {
+    font-family: Pretendard;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 18px;
+    color: #818181;
+}
+.card-answer-content {
+    font-family: Pretendard;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+}
+.card-noAnswer-content {
+    font-family: Pretendard;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    color: #b93333;
+}
+.card-like-wrapper {
+    padding-top: 24px;
+    border-top: 1px solid #cfcfcf;
+    display: flex;
+    gap: 32px;
+    width: 100%;
+}
+.card-thumbs {
+    color: #818181;
+    font-family: Pretendard;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 18px;
+}
+.card-like {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+}
+.card-activethumbs {
+    font-family: Pretendard;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 18px;
+    color: #1877f2;
+}

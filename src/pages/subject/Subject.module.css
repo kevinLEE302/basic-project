@@ -3,9 +3,10 @@
     padding-bottom: 136px;
     margin: 0 auto;
     width: min(716px, calc(100% - 64px));
+    position: relative;
 }
 .RdButton {
-    position: absolute;
+    position: fixed;
     bottom: 24px;
     right: 24px;
 }

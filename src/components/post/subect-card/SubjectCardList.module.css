@@ -1,0 +1,33 @@
+.list-container {
+    border: 1px solid var(--Brown-30, #c7bbb5);
+    background-color: #f5f1ee;
+    border-radius: 8px;
+    padding: 16px;
+}
+.list-icon {
+    max-width: 24px;
+}
+.list-count {
+    font-family: Actor;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 25px;
+    color: #542f1a;
+}
+.list-count-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    margin-bottom: 16px;
+}
+.list-card-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+@media (max-width: 375px) {
+    .list-card-container {
+        gap: 16px;
+    }
+}
