@@ -22,10 +22,10 @@ async function getSubject(id) {
     return data;
 }
 //questions생성->개별피드 페이지,답변 페이지에서 질문 및 답변 리스트 데이터갖고오기
-//offset,limit {questionId}
-async function getQuestions({ qd, offset, limit }) {
+//offset,limit {subjectId}
+async function getQuestions({ id, offset, limit }) {
     const response = await fetch(
-        `https://openmind-api.vercel.app/17-5/subjects/${qd}/questions/?limit=${limit}&offset=${offset}`,
+        `https://openmind-api.vercel.app/17-5/subjects/${id}/questions/?limit=${limit}&offset=${offset}`,
     );
     if (!response.ok) {
         throw new Error();

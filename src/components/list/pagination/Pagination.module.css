@@ -5,27 +5,21 @@
 }
 .pagination-button {
     flex: 0 0 40px;
-    padding: 0;
-    border: none;
     background-color: #f9f9f9;
     font-family: Actor;
     font-weight: 400;
     font-size: 20px;
     line-height: 25px;
     color: #818181;
-    cursor: pointer;
 }
 .pagination-activebutton {
     color: #542f1a;
     flex: 0 0 40px;
-    padding: 0;
-    border: none;
     background-color: #f9f9f9;
     font-family: Actor;
     font-weight: 400;
     font-size: 20px;
     line-height: 25px;
-    cursor: pointer;
 }
 .pagination-button:disabled {
     cursor: default;

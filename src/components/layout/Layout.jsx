@@ -1,10 +1,42 @@
-import { Outlet } from 'react-router-dom';
+import { Outlet, useParams } from 'react-router-dom';
 import Header from './Header';
+import { useState, useEffect } from 'react';
+import { getSubject, getQuestions } from '../../api/getApi';
+const offset = 0;
+const limit = 5;
 function Layout() {
+    const [subject, setSubject] = useState({});
+    const [data, setData] = useState([]);
+    const { id } = useParams();
+
+    useEffect(() => {
+        const getapi = async () => {
+            try {
+                const a = await getQuestions({ id, offset, limit });
+                setData(a.results);
+            } catch (e) {
+                console.log(e.message);
+            }
+        };
+        getapi();
+    });
+
+    useEffect(() => {
+        const getData = async () => {
+            try {
+                const a = await getSubject(id);
+                setSubject(a);
+            } catch (e) {
+                console.log(e.message);
+            }
+        };
+        getData();
+    }, [id]);
+
     return (
         <>
-            <Header />
-            <Outlet />
+            <Header subject={subject} />
+            <Outlet context={{ subject, data }} />
         </>
     );
 }

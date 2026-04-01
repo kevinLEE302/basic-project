@@ -3,7 +3,6 @@
     border-radius: 8px;
     border: 1px solid var(--Grayscale-40, #818181);
     padding: 20px;
-    cursor: pointer;
 }
 .card-wrapper {
     display: flex;

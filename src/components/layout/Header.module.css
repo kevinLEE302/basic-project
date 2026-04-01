@@ -40,10 +40,10 @@
     gap: 12px;
 }
 .header-nav {
-    border: none;
     background-color: #ffffff;
-    padding: 0;
-    cursor: pointer;
+}
+.header-logo {
+    background-color: #ffffff;
 }
 @media (max-width: 375px) {
     .header-backimage {
