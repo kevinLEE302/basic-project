@@ -10,7 +10,7 @@ function AnswerCardList({ subject, items, totalCount, onDelete, onAllDelete }) {
             <div className={styles['list-count-wrapper']}>
                 <img src="/Subject/message.png" className={styles['list-icon']} />
                 <p className={styles['list-count']}>
-                    {items.length === 0 ? '아직 질문이 없습니다' : `${items.length}개의 질문이 있습니다`}
+                    {totalCount === 0 ? '아직 질문이 없습니다' : `${totalCount}개의 질문이 있습니다`}
                 </p>
             </div>
             {items.length === 0 ? (
