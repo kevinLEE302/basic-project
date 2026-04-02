@@ -40,9 +40,9 @@ async function postReaction({ qd, type }) {
     return data;
 }
 //answer생성->답변페이지에서 대상 목록조회results데이터의
-//아이디{answerId}를 통해 폼에 작성 한 값을 보냄
-async function postAnswer({ ad, content, isRejected = false }) {
-    const response = await fetch(`http://openmind-api.vercel.app/17-5/questions/${ad}/answers/`, {
+//아이디{questionId}를 통해 폼에 작성 한 값을 보냄
+async function postAnswer({ qd, content, isRejected = false }) {
+    const response = await fetch(`https://openmind-api.vercel.app/17-5/questions/${qd}/answers/`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ content, isRejected }),

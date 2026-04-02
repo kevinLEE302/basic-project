@@ -7,7 +7,7 @@ import Modal from '../../components/post/modal/Modal';
 import { useState } from 'react';
 
 function Subject() {
-    const { subject, data, totalCount } = useOutletContext();
+    const { subject, data, totalCount, refetchQuestions } = useOutletContext();
     const [isOpen, setIsOpen] = useState(false);
 
     return (
@@ -15,7 +15,13 @@ function Subject() {
             <SubjectCardList subject={subject} data={data} totalCount={totalCount} />
             {isOpen &&
                 createPortal(
-                    <Modal subject={subject} onClick={() => setIsOpen(false)} func={setIsOpen} isOpen={isOpen} />,
+                    <Modal
+                        subject={subject}
+                        onClick={() => setIsOpen(false)}
+                        func={setIsOpen}
+                        isOpen={isOpen}
+                        onSuccess={refetchQuestions}
+                    />,
                     document.getElementById('root-two'),
                 )}
             <RdButton

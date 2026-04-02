@@ -10,17 +10,18 @@ function Layout() {
     const [totalCount, setTotalCount] = useState(0);
     const { id } = useParams();
 
+    const refetchQuestions = async () => {
+        try {
+            const a = await getQuestions({ id, offset, limit });
+            setData(a.results);
+            setTotalCount(a.count);
+        } catch (e) {
+            console.log(e.message);
+        }
+    };
+
     useEffect(() => {
-        const getapi = async () => {
-            try {
-                const a = await getQuestions({ id, offset, limit });
-                setData(a.results);
-                setTotalCount(a.count);
-            } catch (e) {
-                console.log(e.message);
-            }
-        };
-        getapi();
+        refetchQuestions();
     }, [id]);
 
     useEffect(() => {
@@ -38,7 +39,7 @@ function Layout() {
     return (
         <>
             <Header subject={subject} />
-            <Outlet context={{ subject, data, totalCount }} />
+            <Outlet context={{ subject, data, totalCount, refetchQuestions }} />
         </>
     );
 }

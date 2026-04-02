@@ -33,4 +33,5 @@ async function getQuestions({ id, offset, limit }) {
     const data = await response.json();
     return data;
 }
+
 export { getQuestions, getSubject, getSubjects };

@@ -3,6 +3,7 @@
     background-color: #f5f1ee;
     border-radius: 8px;
     padding: 16px;
+    position: relative;
 }
 .list-icon {
     max-width: 24px;
@@ -31,11 +32,32 @@
     justify-content: center;
     margin: 70px auto 65px;
 }
+.RdButton {
+    position: absolute;
+    right: 0;
+    top: -9px;
+    transform: translateY(-100%);
+}
+@media (max-width: 768px) {
+    .RdButton {
+        position: absolute;
+        right: 0;
+        top: -19px;
+        transform: translateY(-100%);
+    }
+}
+
 @media (max-width: 375px) {
     .list-card-container {
         gap: 16px;
     }
     .list-empty {
         margin: 66px auto 106px;
+    }
+    .RdButton {
+        position: absolute;
+        right: 0;
+        top: -6px;
+        transform: translateY(-100%);
     }
 }

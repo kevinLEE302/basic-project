@@ -4,7 +4,7 @@ import Form from '../form/Form';
 import styles from './Modal.module.css';
 import { useParams } from 'react-router-dom';
 
-function Modal({ subject, onClick, func, isOpen }) {
+function Modal({ subject, onClick, func, isOpen, onSuccess }) {
     const [content, setContent] = useState('');
     const [isLoading, setIsLoading] = useState(false);
     const { id } = useParams();
@@ -12,11 +12,11 @@ function Modal({ subject, onClick, func, isOpen }) {
     const handleChange = (e) => {
         setContent(e.target.value);
     };
-    const handleSubmit = async (e) => {
-        e.preventDefault();
+    const onSubmit = async () => {
         try {
             setIsLoading(true);
             await postQuestion({ content, id });
+            await onSuccess();
             func(false);
         } catch (e) {
             console.log(e.message);
@@ -65,7 +65,7 @@ function Modal({ subject, onClick, func, isOpen }) {
                             value={content}
                             onChange={handleChange}
                             placeholder="질문을 입력해주세요"
-                            onSubmit={handleSubmit}
+                            onSubmit={onSubmit}
                             isLoading={isLoading}
                         >
                             질문 보내기
